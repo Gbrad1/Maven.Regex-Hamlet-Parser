@@ -2,12 +2,14 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static org.junit.Assert.*;
 
 public class HamletParserTest {
+    private static final Logger LOGGER = Logger.getLogger(HamletParserTest.class.getName());
     private String hamletText;
     private HamletParser hamletParser;
     private String leonRegex = "[^e][Ll][Ee][Oo][Nn]'?s?";

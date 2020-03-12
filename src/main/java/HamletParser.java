@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -8,6 +9,8 @@ import java.util.regex.Pattern;
  * Created by thook on 10/7/15.
  */
 public class HamletParser {
+
+    private static final Logger LOGGER = Logger.getLogger(HamletParser.class.getName());
 
     private String hamletData;
     private String leonRegex = "[Hh][Aa][Mm][Ll][Ee][Tt]'?s?";
@@ -41,7 +44,7 @@ public class HamletParser {
     }
 
     public void printData() {
-        System.out.println(hamletData);
+        LOGGER.info("\n + " + hamletData);
     }
 
     public void changeHamletToLeon() {
