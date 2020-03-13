@@ -70,6 +70,12 @@ public class HamletParserTest {
     }
 
     @Test
+    public void testChangeBothNames() {
+        hamletParser.changeBothNames();
+        hamletParser.printData();
+    }
+
+    @Test
     public void printTest() {
         hamletParser.printData();
     }
